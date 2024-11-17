@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)https://dz.6gou6.com/online1/index.html -->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/favicon.ico">
+    <title>凡尔赛-商务在线安装</title>
+
+    <script src="./js/vue.global.js.下载"></script>
+    <script src="./js/disabledeveloper.js.下载"></script>
+    <link type="text/css" rel="stylesheet" href="./js/index.css">
+</head>
+
+<body>
+<div id="app" data-v-app=""><div class="container"><img src="./img/微信图片_20241024115132-tic.jpg" alt="Banner" class="responsive-image"><div class="text"><div>==================================================</div><div>⭐️⭐️⭐️KeiEm大佬新开发的微信插件⭐⭐️⭐</div><div>⭐️⭐连续敲屏幕三下即可切换到微信界面⭐️⭐</div>
+<div>⭐️⭐️⭐ 点击微信打开功能界面使用 ⭐️⭐️⭐</div>
+<div>商务在线安装重要提示：如果您是第一次在本站在线安装APP，首次打开可能会闪退，按照下面《商务在线安装修复教程》修复闪退。一次修复，永久更新商务包。</div><div>==================================================</div><div>全网独家商务模式，一次下载永不掉签</div><div>特别提醒：商务模式只能在凡尔赛官网商务兑换选项里兑换安装</div><div>不支持IOS15及以下系统，禁止安装！！！</div></div><div><a href="itms-services://?action=download-manifest&url=https://frs.bytian.cc/plist/xinghaiqing.plist" class="btn">商务在线安装——星海琴</a></div><div><a href="itms-services://?action=download-manifest&url=https://frs.bytian.cc/plist/yunzhizheng2.plist" class="btn">商务在线安装——云之筝</a></div><div><a href="https://mp4.bytian.cc/swb.html" class="btn">商务在线安装视频教程</a></div><div><a href="https://vulreniyt4.feishu.cn/docx/Z4m9d0lZ5oBilmxsQTzcpsdcnYe?from=from_copylink" class="btn">商务在线安装修复教程</a></div><img src="./img/微信图片_20241024114532-tic.jpg" alt="Footer" class="responsive-image"></div></div>
+
+
+<script>
+    const { createApp, ref } = Vue;
+    const App = {
+        setup() {
+            const isTencentApp = ref(false);
+            const ua = navigator.userAgent.toLowerCase();
+            if (/micromessenger|qq\//.test(ua)) {
+                isTencentApp.value = true;
+            }
+
+            const textContent = ref([
+                "==================================================",
+                "⭐️⭐️⭐️ 兑换安装: 兑换码一码一开 ⭐️⭐️⭐",
+                "⭐️⭐️⭐ 在线安装: 兑换码一码双开 ⭐️⭐️⭐",
+                "商务在线安装重要提示：如果您是第一次在本站在线安装APP，首次打开可能会闪退，按照下面《商务在线安装修复教程》修复闪退。一次修复，永久更新商务包。",
+                "==================================================",
+                "全网独家商务模式，一次下载永不掉签",
+                "特别提醒：商务模式只能在斗战神官网商务兑换选项里兑换安装",
+		        "不支持IOS15及以下系统，禁止安装！！！",
+            ]);
+            const buttons = ref([
+                { id: 1, label: '商务在线安装——星海琴', url:'itms-services://?action=download-manifest&url=https://frs.bytian.cc/plist/xinghaiqing.plist' },
+                { id: 2, label: '商务在线安装——星海琴', url:'itms-services://?action=download-manifest&url=https://frs.bytian.cc/plist/xinghaiqing.plist' },
+                { id: 3, label: '商务在线安装——星海琴', url:'itms-services://?action=download-manifest&url=https://frs.bytian.cc/plist/xinghaiqing.plist' },
+                { id: 4, label: '商务在线安装修复教程', url:'https://help.6gou6.com/2024/06/12/%E9%97%AA%E9%80%80%E4%BF%AE%E5%A4%8D%E6%95%99%E7%A8%8B/' },
+                // { id: 5, label: '商务在线安装视频教程', url: 'https://video-material-tencos.lingtuo.cn/team/video/89785850/16zabg/seq/1718622804.368287.mp4' },
+            ]);
+
+            function btnClick(buttonId) {
+                // 此处可以加入你希望在跳转之前执行的其他逻辑
+                // alert(`按钮${buttonId}被点击`);
+                // 使用window.location来重定向到指定的URL
+                const button = buttons.value.find(btn => btn.id === buttonId);
+                if (button && button.url) {
+                    window.location.href = button.url;
+                }
+            }
+            return {
+                isTencentApp,
+                textContent,
+                buttons,
+                btnClick
+            };
+        }
+    };
+    createApp(App).mount('#app');
+</script>
+
+
+</body></html>

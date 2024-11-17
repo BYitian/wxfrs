@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/favicon.ico">
+    <title>凡尔赛</title>
+
+    <script src="./js/vue.global.js.下载"></script>
+    <script src="./js/disabledeveloper.js.下载"></script>
+    <link type="text/css" rel="stylesheet" href="./js/index.css">
+</head>
+
+<body>
+<div id="app" data-v-app=""><div class="container"><img src="./img/微信图片_20241024115132-tic.jpg" alt="Banner" class="responsive-image"><div class="text"><div>==================================================</div><div>特别提醒：ios15及以下系统禁止安装</div><div>支持苹果16ios18系统，但在苹果16ios18系统下微信聊天记录点击会返回至微信顶部不影响使用，其他机型18系统无此bug，使用期间发现其他未知bug请录屏提交</div><div>商务在线安装重要提示：如果您是第一次在本站在线安装APP，首次打开可能会闪退，按照下面《商务在线安装修复教程》修复闪退。一次修复，永久更新商务包。</div><div>==================================================</div></div>
+<div><a href="./online/index.html" class="btn">电脑版商务在线安装</a></div>
+  <!--<div><a href="https://www.baidu.com/" class="btn">TF安装第一步</a></div>-->
+
+<div><a href="https://mp4.bytian.cc/frs.html" class="btn">全功能展示视频</a></div>
+<div><a href="https://share.feijipan.com/s/NZDVEwBO" class="btn">语音包 用户自行下载导入</a></div>
+<div><a href="https://mp4.bytian.cc/yyb.html" class="btn">语音包导入视频教程</a></div>
+<div><a href="https://mp4.bytian.cc/frssw.html" class="btn">商务版云之筝下载教程</a></div>
+<div><a href="https://frs.bytian.cc/#" class="btn">凡尔赛持续更新中 有问题反馈</a></div>
+<img src="./img/微信图片_20241024114532-tic.jpg" alt="Footer" class="responsive-image"></div></div>
+
+<script>
+    const { createApp, ref } = Vue;
+    const App = {
+        setup() {
+            const isTencentApp = ref(false);
+            const ua = navigator.userAgent.toLowerCase();
+            if (/micromessenger|qq\//.test(ua)) {
+                isTencentApp.value = true;
+            }
+
+            const textContent = ref([
+                "==================================================",
+	        "特别提醒：ios15及以下系统禁止安装",
+                "支持苹果16ios18系统，但在苹果16ios18系统下微信聊天记录点击会返回至微信顶部不影响使用，其他机型18系统无此bug，使用期间发现其他未知bug请录屏提交",
+                "商务在线安装重要提示：如果您是第一次在本站在线安装APP，首次打开可能会闪退，按照下面《商务在线安装修复教程》修复闪退。一次修复，永久更新商务包。",
+                "==================================================",
+            ]);
+            const buttons = ref([
+               // { id: 1, label: '商店版商务兑换安装', url: 'bm/index.html' },
+                { id: 4, label: '电脑版商务在线安装', url:'online/index.html' },
+                { id: 5, label: 'TF安装第一步', url: 'https://apps.apple.com/cn/app/testflight/id899247664' },
+                { id: 6, label: 'TF安装第二步', url: 'https://down.app9527.xyz/#/redeem/DTF' },
+                { id: 7, label: '功能使用教程', url: 'jiaocheng/index.html' },
+                { id: 8, label: '邀请码查询', url: 'check/index.html' },
+            ]);
+
+            function btnClick(buttonId) {
+                // 此处可以加入你希望在跳转之前执行的其他逻辑
+                // alert(`按钮${buttonId}被点击`);
+                // 使用window.location来重定向到指定的URL
+                const button = buttons.value.find(btn => btn.id === buttonId);
+                if (button && button.url) {
+                    window.location.href = button.url;
+                }
+            }
+            return {
+                isTencentApp,
+                textContent,
+                buttons,
+                btnClick
+            };
+        }
+    };
+    createApp(App).mount('#app');
+</script>
+
+
+</body></html>
